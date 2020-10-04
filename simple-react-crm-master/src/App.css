@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+  background: #eff1f3;
+  font-family: "Inter";
+  margin: 60px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.list{
+  width: 400px;
+}
+
+input, button{
+  font-family: "Inter";
+}
+
+form{
+  border-bottom: solid 2px #ccc;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+form input[type="text"], button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 8px 15px #1d2e5311;
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+form input[type="text"]:focus, form button:focus{
+  box-shadow: 0px 0px 0px 3px #0059ff44;
+}
+
+form label{
+  margin-left: 2px;
+}
+
+form input{
+  background: white;
+}
+
+form button {
+  background: #0059ff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-tags{
+  margin: 20px 0;
+}
+
+.item{
+  margin: 20px 0px;
+  box-shadow: 0px 8px 15px #1d2e5311;
+  padding: 15px;
+  border-radius: 12px;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.item button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #dfe5eb;
+  color: #8fa4c0;
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  font-size: 1.2em;
+  box-shadow: 0px 5px 10px #00000011;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.item button:hover{
+  background: #ffd5d5;
+  color: #fd6868;
+}
+
+.item-info{
+
+}
+
+.name{
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.tag{
+  font-size: 0.9em;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.tag-dev{
+  color: #26d15f;
+  background: #00ff6a33;
+}
+
+.tag-design{
+  color: #ffae00;
+  background: #ffae0033;
+}
+
+.tag:before{
+  content: "# "
+}
