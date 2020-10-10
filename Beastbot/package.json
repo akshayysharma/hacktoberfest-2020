@@ -1,0 +1,26 @@
+{
+  "name": "beastbot",
+  "version": "1.0.0",
+  "description": "This bot will input user's voice using Web Speech API's Speech Recognition and send the user's message to a NLP API as a text string, when the API.AI returns back use the SpeechSynthesis interface to give it a voice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beasthunter758/Beastbot.git"
+  },
+  "author": "Pratik Sinha",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/beasthunter758/Beastbot/issues"
+  },
+  "homepage": "https://github.com/beasthunter758/Beastbot#readme",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "dotenv-extended": "^2.7.1",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "socket.io": "^2.3.0"
+  }
+}
