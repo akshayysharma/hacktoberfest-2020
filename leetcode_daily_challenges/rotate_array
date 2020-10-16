@@ -1,0 +1,32 @@
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        int count = 0; 
+        int i = 0;
+        
+        while(count < n){ // Count is the number of array elements rotated already
+
+            int prev = nums[i]; 
+            int next = nums[i];
+            int j = i;
+            
+            while(true){
+                // ex. nums = [1,2,3,4,5,6,7], k = 3
+                // 1 replaces 4, then 4 replaces 7, etc, so 
+                // first prev is 1 and next is 4, then prev is 4 and next is 7
+                
+                next = nums[(j+k)%n];
+                nums[(j+k)%n] = prev;
+                prev = next;
+                
+                j = (j+k)%n; // move to the next element to rotate
+                count++;
+                
+                if(j == i) break; // i is the starting index, j is the moving/current index, 
+                // a cycle will start repeating so we move on to the next starting element
+            }
+            i++;
+        }
+    }
+};
