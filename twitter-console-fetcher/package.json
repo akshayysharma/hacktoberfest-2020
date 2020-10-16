@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "twitter console application",
   "main": "index.js",
-  "repository": "https://github.com/TicTak21/twitter-console-fetcher",
   "author": "TicTak21",
   "license": "MIT",
   "private": true,
