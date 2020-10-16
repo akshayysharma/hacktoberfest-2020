@@ -1,0 +1,30 @@
+class Solution {
+public:
+   // First binarysearch the row then search for the column
+   // Will be O(log n + log m)
+   // which is the same as the other solution on Discuss which binary searches entire array like a list (O(log(n*m))
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if (size(matrix) == 0 || size(matrix[0] )== 0) return false;
+        int h = size(matrix)-1;
+        int n = size(matrix[0])-1;
+        int l = 0;
+        int row = -1;
+        while(l <= h){
+            int m = (l+h)/2;
+            if (target >= matrix[m][0] && target <= matrix[m][n] ){row = m; break;}
+            else if(target > matrix[m][n]) { l = m+1;}
+            else h = m-1;
+        }
+        if(row == -1) return false;
+        h = n;
+        l = 0;
+        while(l <= h){
+            int m = (l+h)/2;
+            if(matrix[row][m] == target) return true;
+            else if(target > matrix[row][m]) l = m+1;
+            else h = m-1;
+        }
+        return false;
+        
+    }
+};
