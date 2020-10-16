@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game by Daniel Victor Frerie Feitosa</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        canvas {
+            background: linear-gradient(to bottom, black 50%, #610B4B);
+            margin-top: 7px;
+        }
+        code {
+            display: block;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <code>score => <b id="score">0</b></code>
+        <canvas id="game" width="800" height="768"></canvas>
+    </center>
+    <script type="text/javascript">
+
+        const canvas = document.querySelector('#game');
+        const score_display = document.querySelector('#score');
+        const ctx = canvas.getContext('2d');
+
+        let posix = {
+            x : 10,
+            y : 10
+        };
+
+        let velocitys = {
+            x : 0,
+            y : 0
+        };
+
+        let snake_size = 5;
+        let container_size = 27;
+        let snake = [];
+
+        let food = {
+            x : 10,
+            y : 10
+        };
+
+        let score = 0;
+
+        const game = () => {
+
+            posix.x += velocitys.x;
+            posix.y += velocitys.y;
+
+            if(posix.x < 0){
+                posix.x = container_size;
+            }
+
+            if(posix.x > container_size){
+                posix.x = 0;
+            }
+
+            if(posix.y < 0){
+                posix.y = container_size;
+            }
+
+            if(posix.y > container_size){
+                posix.y = 0;
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if(score < 10){
+                ctx.fillStyle = 'grey';
+            }
+            
+            if(score >= 10 && score < 20){
+                ctx.fillStyle = '#DF7401';
+            }
+            
+            if(score >= 20 && score < 30){
+                ctx.fillStyle = 'green';
+            }
+
+            if(score >= 30 && score < 40){
+                ctx.fillStyle = '#0174DF';
+            }
+
+            if(score >= 40){
+                ctx.fillStyle = '#81F7D8';
+            }
+
+            for(let i = 0; i < snake.length; i++){
+
+                ctx.fillRect(snake[i].x * container_size, snake[i].y * container_size, container_size - 1, container_size - 1);
+
+                if(snake[i].x == posix.x && snake[i].y == posix.y){
+                    snake_size = 5;
+                    score = 0;
+                }
+
+            }
+
+            while(snake.length > snake_size){
+                snake.shift();
+            }
+
+            snake.push({
+                x : posix.x,
+                y : posix.y
+            });
+
+            ctx.fillStyle = 'red';
+            ctx.fillRect(food.x * container_size, food.y * container_size, container_size - 1, container_size - 1);
+
+            if(posix.x == food.x && posix.y == food.y){
+
+                snake_size += 1;
+                score += 1;
+
+                food.x = Math.floor(Math.random() * container_size);
+                food.y = Math.floor(Math.random() * container_size);
+
+            }
+
+            score_display.innerText = score;
+
+        };
+
+        playing = setInterval(game, 100);
+
+        document.addEventListener('keydown', (e) => {
+
+            switch(e.key){
+
+                case 'ArrowUp':
+                    velocitys.y = -1;
+                    velocitys.x = 0;
+                    break;
+                case 'ArrowDown':
+                    velocitys.y = 1;
+                    velocitys.x = 0;
+                    break;
+                case 'ArrowLeft':
+                    velocitys.y = 0;
+                    velocitys.x = -1;
+                    break;
+                case 'ArrowRight':
+                    velocitys.y = 0;
+                    velocitys.x = 1;
+                    break;
+
+            }
+
+        });
+
+    </script>
+</body>
+</html>
