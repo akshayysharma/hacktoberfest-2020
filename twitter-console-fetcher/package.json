@@ -1,0 +1,24 @@
+{
+  "name": "twitter-console-fetcher",
+  "version": "0.1.0",
+  "description": "twitter console application",
+  "main": "index.js",
+  "repository": "https://github.com/TicTak21/twitter-console-fetcher",
+  "author": "TicTak21",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
+    "format": "prettier --config .prettierrc.json '**/*.js' --write"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "twitter": "^1.7.1"
+  }
+}
