@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="model" onclick="hidemodel(event)">
+      <div class="content">
+        <form class="addform" onsubmit="addbus(event)">
+          <input type="text" required placeholder="Enter Name" id="bname" />
+          <br />
+          <input type="text" required placeholder="Enter Source" id="bsource" />
+          <br />
+          <input
+            type="text"
+            required
+            placeholder="Enter Destination"
+            id="bdestination"
+          />
+          <br />
+          <input type="text" required placeholder="Enter Number" id="bnumber" />
+          <br />
+          <input
+            type="number"
+            required
+            placeholder="Enter Passenger Capacity"
+            id="bcap"
+          />
+          <br />
+          <button type="submit" required class="popup">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="head">
+        <h1>Bus Services</h1>
+        <button class="popup" onclick="popup(event)">Add Bus</button> <br />
+      </div>
+
+      <div class="search">
+        <h3>Search Bus:</h3>
+        <input
+          type="search"
+          placeholder="Enter Source"
+          id="searchSource"
+          onkeyup="searchSource()"
+        />
+        <input
+          type="search"
+          placeholder="Enter Destination"
+          id="searchDestination"
+          onkeyup="searchDestination()"
+        />
+      </div>
+
+      <table border="1" cellspacing="0" class="table">
+        <thead>
+          <tr>
+            <th>S.no.</th>
+            <th>Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Number</th>
+            <th>Passenger Capacity</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="table.js"></script>
+  </body>
+</html>
