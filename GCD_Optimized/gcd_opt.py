@@ -18,3 +18,5 @@ if __name__ == "__main__":
     input = sys.stdin.readline()        #Enter 2 numbers separated using space E.g. -> 28851538 1183019 
     a, b = map(int, input.split())      #Numbers are copied into 2 variables
     print(gcd_optimized(a, b))          #Calling the optimized function and printing returned value
+    
+#The output will be 17657, as 28851538 = 17657 · 1634, 1183019 = 17657 · 67
