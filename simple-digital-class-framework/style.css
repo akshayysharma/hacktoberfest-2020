@@ -1,0 +1,179 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.screen{
+	border: 1px solid grey;
+	display: flex;
+	flex-wrap: wrap;
+}
+li{
+	padding: 3%;
+	font-size: 01.3em;
+	align-content: space-between;
+	border-top-right-radius: 10%;
+	border-bottom-right-radius:10%;
+}
+li:hover{
+	background-color: red;
+	
+	border-top-right-radius: 10%;
+	border-bottom-right-radius:10%;
+	margin-right: 2%;
+}
+.star{
+	margin-left: 28rem;
+}
+.left{
+		border: 1px solid grey;
+		width:19%;
+		margin: 0%;
+		padding-top: 1%;
+}
+.sp{
+	align-items: space-between;
+	display: flex;
+	flex-wrap: wrap;
+}
+.sp i{
+	margin: 5%;
+}
+.division{
+	margin-top: 0%;		
+	padding-top: 0%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.jc{
+	background-color: red;
+	color: white;
+	font-size: 1.6em;
+	padding: 2%;
+	width: 80%;		
+	margin-left: -5rem;
+	text-align: center;
+	border-radius: 10%;
+
+}
+.division .num{
+	width:23%;
+	margin:2%;
+}
+.text h1, .text h2, .text h3, .text h5{
+	margin: 0%;
+}
+.logo img{
+	width:30%;
+	border-radius:50%;
+	height:4em;
+	margin-top: 5%;
+	float: left;
+}
+.text{
+
+	margin-left: 5.3rem;
+}
+.text h1{
+	margin-top: 5%;
+}
+.center{
+	border: 1px solid grey;
+	width:55%;
+	margin: 0%;
+}
+.right{
+		background-color: #F5F5F5;
+		border: 1px solid grey;
+		width:23%;
+		margin: 0%;
+		padding-left: 2%;	
+}
+
+.right .box	{
+	background-color: white;
+	width:80%;
+	margin: 10%;
+	margin-left: 0%;
+	box-shadow: 2px 5px lightgrey;
+
+	padding-left: 5%;
+	padding-top: 5%;
+
+	padding-bottom: 5%;
+	text-align: left;
+	height: 15%;
+	border: 1px solid black;
+}
+.frnd{
+	width:80%;
+}
+.contact{
+	background-color: #E6E6FA;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.image img{
+	border: 1px solid blue;
+	float: left;
+	border-radius: 50%;
+	width:20%;
+	height: 2.5em;
+	margin-top: 5%;
+	margin-left: 5%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.image h3, .image h5{
+	padding: 0%;
+	margin-top: 2%;
+	margin-left: 5rem;
+	padding-bottom: 0%;
+}
+.image h5{
+	margin-bottom: 1%;
+}
+.image:hover{
+	background-color: #ccccff;
+}
+.test{
+	color: red;
+	padding: 5%;
+}
+.sub{
+	border: 1px solid #EFEFEF;
+	color: black;
+	padding: 2%;
+	margin: 0%;
+}
+.sub h2, .sub h3{
+	margin: 0%;
+	padding: 0%;
+}
+.btn{
+	width: 50%;
+	margin: 0%;		
+	padding-left: 25rem;
+	display: flex;flex-wrap: wrap;
+}
+.btn .cr{
+	margin-right: 0.5em;
+	align-items: center;
+	padding: 1rem;		
+	color: black;
+	border: 1px solid red;
+}
+.btn .an{
+	padding: 1rem;
+	background-color: black;
+	border: 1px solid red;
+	color: white;
+}
+
+.atnd{
+	margin-left: 0rem;
+}
+.atnd h1{
+	margin-top: 5%;
+	color: red;
+}
