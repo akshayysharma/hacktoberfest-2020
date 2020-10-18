@@ -68,42 +68,6 @@ function reset(){
 
 }
 
-// easyBtn.addEventListener("click",function(){
-//     easyBtn.classList.add("selected")
-//     hardBtn.classList.remove("selected")
-//     numSquares=3;
-//     colors= generateRandonColors(numSquares);
-//     pickedColor=pickColor();
-//     colorDisplay.textContent=pickedColor;
-
-//     for(var i=0;i<squares.length;i++){
-//         if(colors[i]){
-//             squares[i].style.background=colors[i]
-//         }else{
-//             squares[i].style.display="none";
-//         }
-//     }
-// })
-
-// hardBtn.addEventListener("click",function(){
-//     hardBtn.classList.add("selected")
-//     easyBtn.classList.remove("selected")
-//     numSquares=6;
-//     colors= generateRandonColors(numSquares);
-//     pickedColor=pickColor();
-//     colorDisplay.textContent=pickedColor;
-
-//     for(var i=0;i<squares.length;i++){ 
-//         if(colors[i]){
-//             squares[i].style.background=colors[i]
-//         }else{
-//             squares[i].style.display="block";
-//         }
-//     }
-// })
-
-// 
-
 resetButton.addEventListener("click", function(){
     reset();
 })
