@@ -1,0 +1,69 @@
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+  <div fxFlex>
+    <div>
+        <h3>About Us</h3>
+        <hr>
+    </div>
+  </div>
+  <div fxFlex>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="70">
+        <h2>Our History</h2>
+        <p>Home Chef Restaurant, a fine dining restaurant, conceptualized in the latter end of 1979, is the success story and brainchild of renowned entrepreneur Abdulla Mannakuzhy. Nestled in the capital city of Gods own country, the restaurant has created a niche for itself in the world of Modern Middle-Eastern Cuisine and promises further delight with time to come.Despite its relaxed ambiance this informal restaurant is wonderfully glamorous, both by day and by night making it the perfect spot to dine with your friends and family. Since inception, there has been a real passion to serve delicious meals in which there was no compromise on freshness, quality, hygiene and healthiness.</p>
+        <p>Home Chef Restaurants took assured steps of success by the grace of Allah with the starting of Zam Zam Ice Fruits in 2002 followed by a new outlet in Calicut in 2005. Based on the enormity of the success and support shown to us by our customers we have initiated Zam Zam Mini, our latest venture, through which we hope to bring about new standards to fine dining in Trivandrum.</p>
+      </div>
+      <div fxFlex="30">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+            <h2>Facts At a Glance</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <dl>
+              <dt>Started</dt>
+              <dd>3 Feb. 2013</dd>
+              <dt>Major Stake Holder</dt>
+              <dd>HK Fine Foods Inc.</dd>
+              <dt>Last Year's Turnover</dt>
+              <dd>$1,250,375</dd>
+              <dt>Employees</dt>
+              <dd>40</dd>
+            </dl>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div fxFlex>
+    <mat-card>
+      <blockquote>
+        <h3>You better cut the pizza in four pieces because
+            I'm not hungry enough to eat six.</h3>
+        <footer>-- Yogi Berra,
+          <cite>The Wit and Wisdom of Yogi Berra,
+            P. Pepe, Diversion Books, 2014</cite>
+        </footer>
+      </blockquote>
+    </mat-card>
+  </div>
+  <div fxFlex >
+    <h2>Corporate Leadership</h2>
+    <mat-list  *ngIf="leaders"  [@expand]>
+      <mat-list-item *ngFor="let leader of leaders">
+        <img matListAvatar src="{{BaseURL + leader.image}}" alt={{leader.name}}>
+        <p mat-line>
+          <span> {{leader.name}}</span>
+        </p>
+        <p mat-line>
+          <span> {{leader.designation}}</span>
+        </p>
+        <p mat-line>
+          <span> {{leader.description}}</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
