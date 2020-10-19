@@ -1,3 +1,4 @@
+
 /*
 Problem Statement:
 Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 ≤ i ≤ j < n.
@@ -7,6 +8,7 @@ Output: 28
 Explanation: The maximum result is 5 XOR 25 = 28.
 
 */
+
 class Solution {
     public int findMaximumXOR(int[] nums) {
         int mask = 0, max = 0;
