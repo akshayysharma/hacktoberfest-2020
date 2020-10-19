@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .section-head {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #showcase {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    background-image: url("./image/bg.jpg");
+  }
+  
+  #showcase .container{
+      margin-top: 20vh;
+  }
+  
+ .container {
+    max-width: 1180px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+  } 
+  
+  .lead{
+    font-size: 1.8rem;
+    font-family: "Sriracha";
+  }
+    
+  /* carousel */
+
+    .wrap{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    background: linear-gradient(20deg, rgb(4, 36, 1), rgb(101, 211, 79));
+  }
+
+  /* Navigation */
+
+  .pull-left{
+    margin-top: 0px;
+  }
+  nav {
+    height: 82px;
+    width: 100%;
+    background-color: rgb(30, 40, 51);
+    color: #eee;
+    position: fixed;
+    display: block;
+    z-index: 2;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+  nav li {
+    display: inline;
+    font-size: 2rem;
+  }
+  nav a {
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    padding: 8px 0;
+    margin-top: 15px;
+    color: rgb(141, 126, 126);
+  }
+  nav a#openup {
+    display: none;
+  }
+
+  /* Nav-hover effects */
+
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 2px;
+  }
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    background-color: rgb(46, 62, 78);
+    color: white;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+  .why-us{
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    border: 1px solid white;
+    transition: all 200ms ease;
+    padding: 10px 20px;
+  }
+ .why-us:hover{
+    background: white;
+    opacity: 0.7;
+ }
+ .fas:hover{
+    color: rgb(46, 62, 78);
+ }
+   
+ /*Media queries */
+  
+  @media screen and (max-width: 685px) {    
+    *{
+        overflow-x: hidden;
+    }
+    .pull-left {
+      display: none;
+    }
+    .wrap{
+        width:80%;
+        margin: 10px auto;
+    }  
+    #showcase .container {
+        margin-top: 20vh;
+    }   
+    .section-main p{
+        display: none;
+    }    
+    nav {
+      height: auto;
+      border-bottom: 0;
+    }
+    nav ul {
+      display: none;
+      height: auto;
+    }
+    nav li {
+      width: 100%;
+      float: right;
+      position: relative;
+    }
+    nav a {
+      text-align: left;
+      width: 100%;
+      text-indent: 25px;
+      font-size: 2rem;
+      /* background: #333; */
+      border-bottom: 1px solid #ccc;
+      color:#eee;
+    }
+  
+    nav a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+  
+      position: absolute;
+      right: 5px;
+      top: 20px;
+    }
+    nav a#openup {
+      display: block;
+      /* background-color: #333; */
+      width: 100%;
+      position: relative;
+    }
+  }
+  .cf:before, .cf:after {
+    content: "";
+    display: table;
+  }
+  
+  .cf:after {
+    clear: both;
+  }
+  
+  .cf {
+    zoom: 1;
+  }
+
+  /* footer styling */
+
+  .footer-section{
+    background: rgb(30, 40, 51);
+    color: #fff;
+    font-size: 2rem;
+  }
+  .main-footer{
+    display: flex;
+    justify-content: center;
+  }  
+  .footer-social{
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+  }
+  
+  
