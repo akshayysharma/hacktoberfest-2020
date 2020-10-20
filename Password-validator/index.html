@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "> 
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Password validator</title>
+    </head>
+    <body>
+        
+     <input type="password" id="password" placeholder="Enter password"
+     onInput="check()" />
+    
+    <br>
+       
+      <div id="set" >
+     <div id="count">Length : 0 </div>
+      </div>
+       
+    <div id="check0">
+      <i class="fa fa-check-circle"></i>  <span> Length more than 5.</span>
+    </div>
+     <div id="check1">
+      <i class="fa fa-check-circle"></i>  <span> Length less than 10.</span>
+    </div>
+     <div id="check2">
+      <i class="fa fa-check-circle"></i>  <span> Contains numerical character.</span>
+    </div>
+     <div id="check3">
+      <i class="fa fa-check-circle"></i>   <span>Contains special character.</span>
+      </div>
+       <div id="check4">
+      <i class="fa fa-check-circle"></i>  <span>Shouldn't contain spaces.</span>
+    </div>
+     
+   <script src ="script.js"></script>
+    </body>
+</html>
