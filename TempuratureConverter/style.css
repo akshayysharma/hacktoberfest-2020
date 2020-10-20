@@ -1,0 +1,24 @@
+body {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  border: 3px solid #73ad21;
+}
+
+h1,
+h4,
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+input,
+span {
+  font-size: 20px;
+}
+
+#input1 {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
