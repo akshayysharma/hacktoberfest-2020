@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Aleo", serif;
+}
+#set {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+#count {
+  display: inline-block;
+  position: relative;
+  margin: 4%;
+  margin-bottom: 2%;
+  color: #000;
+  font-size: 18px;
+  text-indent: 40px;
+  font-weight: bolder;
+}
+
+#see {
+  display: inline-block;
+  color: gray;
+  margin: auto;
+  float: right;
+  margin-right: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+input[id="password"] {
+  border: none;
+  width: 80%;
+  outline: none;
+  border-bottom: 5px solid #efefef;
+  display: block;
+  position: relative;
+  font-size: 27px;
+  text-align: center;
+  top: 50px;
+  margin-left: 35px;
+  margin-bottom: 40px;
+  user-select: auto;
+  font-family: "Slabo 27px", serif;
+  transition-duration: 600ms;
+}
+
+i {
+  font-size: 23px;
+  transition-duration: 600ms;
+}
+
+#check0,
+#check1,
+#check2,
+#check3,
+#check4 {
+  display: block;
+  position: relative;
+  margin: 4%;
+  color: tomato;
+  font-size: 18px;
+  width: 92%;
+}
+
+span {
+  margin: 10px;
+}
+
+input:hover {
+  border-bottom: 5px solid #3498db;
+}

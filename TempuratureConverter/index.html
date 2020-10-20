@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" >
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<h4>Type Temperature in celcius to convert it into fahrenheit</h4>
+<p>
+<label>Celcius</label>
+<input id="input1"  placeholder="celcius"
+oninput="CtoFconverter(this.value)" onchange="CtoFconverter(this.value)">
+</p>
+<p>Fahrenheit: <span class="fahrenheit"></span></p>
+
+<h4>Type Temperature in fahrenheit to convert it into celcius</h4>
+<p>
+<label>Fahrenheit</label>
+<input id="input1"  placeholder="fahrenheit"
+oninput="FtoCconverter(this.value)" onchange="FtoCconverter(this.value)">
+</p>
+<p>Celcius: <span class="celcius"></span></p>
+<script src = "script.js">
+ 
+</script>
+</body>
+</html>
