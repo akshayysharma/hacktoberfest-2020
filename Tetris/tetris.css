@@ -1,0 +1,39 @@
+canvas {
+    background-color:black;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+ 
+}
+#scorePoints {
+    font-size: 40px;
+    position: absolute;
+    left: 560px;
+    top: 20px;
+    
+}
+#startButton {
+    position: absolute;
+    left: 100px;
+    top: 60px;
+}
+
+#hold {
+    background-color: white;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+}
+
+#holdText {
+    position: absolute;
+    font-size: 20px;
+    left: 80px;
+    top: 220px;
+}
+
+#scoreText {
+    position: absolute;
+    left: 520px;
+    top: 20px;
+}
