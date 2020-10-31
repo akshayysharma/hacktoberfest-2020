@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> with HTML, CSS & JS</h1>
+    <div class="tabs">
+        <div class="tabs_sidebar">
+            <button class="tabs_button" data-for-tab="1">Tab #1</button>
+            <button class="tabs_button" data-for-tab="2">Tab #2</button>
+            <button class="tabs_button" data-for-tab="3">Tab #3</button>
+        </div>
+        <div class="tabs_content " data-tab="1">
+            <h2>Tab #1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tenetur temporibus placeat inventore
+                asperiores natus omnis optio harum ducimus quas accusantium dicta, nemo sit nesciunt, cumque reiciendis
+                minima veniam, fugit laudantium sunt? Provident reprehenderit veritatis quod ullam mollitia enim
+                voluptates? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti et voluptatem ab
+                quaerat sapiente.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cum earum, corrupti asperiores nemo, amet
+                atque ratione libero iure quisquam at, consectetur deserunt in dolore laudantium dolores. Ex iusto animi
+                illum ducimus quod dignissimos non minus dolorem, consectetur illo iste amet totam facilis autem id,
+                nobis qui. Doloribus, nesciunt? Alias.
+            </p>
+        </div>
+        <div class="tabs_content" data-tab="2">
+            <h2>Tab #2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tenetur temporibus placeat inventore
+                asperiores natus omnis optio harum ducimus quas accusantium dicta, nemo sit nesciunt, cumque reiciendis
+                minima veniam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cum earum, corrupti asperiores nemo, amet
+                atque ratione libero iure quisquam at, consectetur deserunt in dolore laudantium dolores. Ex iusto animi
+                illum ducimus quod dignissimos non minus dolorem, consectetur illo iste amet totam facilis autem id,
+                nobis qui. Doloribus, nesciunt? Alias.
+            </p>
+        </div>
+        <div class="tabs_content" data-tab="3">
+            <h2>Tab #3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tenetur temporibus placeat inventore
+                asperiores natus omnis optio harum ducimus quas accusantium dicta, nemo sit nesciunt, cumque reiciendis
+                minima veniam, fugit laudantium sunt? Provident reprehenderit veritatis quod ullam mollitia enim
+                voluptates? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia corrupti et voluptatem ab
+                quaerat sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi dolor aliquid
+                eligendi ullam error molestias iste assumenda? Repellendus, vero? Enim provident nesciunt nam veritatis!
+                Id error omnis quaerat hic.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cum earum.
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        function setUpTabs (){
+            document.querySelectorAll(".tabs_button").forEach(button => {
+                button.addEventListener("click", () => {
+                    const sideBar = button.parentElement;
+                    const  tabsContainer = sideBar.parentElement;
+                    const tabNumber = button.dataset.forTab;
+                    const tabToActivate = tabsContainer.querySelector(`.tabs_content[data-tab="${tabNumber}"]`);
+
+
+                    sideBar.querySelectorAll(".tabs_button").forEach(button => {
+                        button.classList.remove("tabs_button-active");
+                    });
+                    tabsContainer.querySelectorAll(".tabs_content").forEach(tab => {
+                        tab.classList.remove("tabs_content-active");
+                    });
+
+                    button.classList.add("tabs_button-active");
+                    tabToActivate.classList.add("tabs_content-active");
+                });
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", ()=> {
+            setUpTabs();
+
+            document.querySelectorAll(".tabs").forEach(tabsContainer => {
+                tabsContainer.querySelector(".tabs_sidebar .tabs_button").click();
+            });
+
+        });
+
+    </script>
+</body>
+</body>
+
+</html>

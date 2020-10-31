@@ -1,0 +1,46 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.tabs{
+    border: 1px solid #cccccc;
+    display: flex;
+}
+
+.tabs_sidebar{
+    width: 125px;
+    flex-shrink: 0;
+    background: #cccccc;
+}
+
+.tabs_button{
+    display: block;
+    padding: 10px;
+    background: #eeeeee;
+    border: none;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+.tabs_button:active{
+    background: #dddddd;
+}
+
+.tabs_button:not(:last-of-type){
+    border-bottom: 1px solid #cccccc;
+}
+
+.tabs_button-active{
+    font-weight: bold;
+    border-right: 2px solid #009879;
+    background: #dddddd;
+}
+.tabs_content{
+    padding: 15px;
+    font-size: 0.8rem;
+    display: none;
+}
+.tabs_content-active{
+    display: block;
+}
