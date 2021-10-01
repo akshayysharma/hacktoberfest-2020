@@ -1,0 +1,77 @@
+body
+{
+    background-color: #E7D1DD;
+    
+}
+body p
+{
+    font-size: 1.6rem;
+}
+
+body h2
+{
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.container
+{
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.navbar
+{
+    background-color: black;
+    color: #E7D1DD;
+    font-size: 1.2rem;
+}
+.navbar-brand
+{
+    font-size: 1.8rem;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+  }
+.nav-link:hover {
+    transform: scale(1.1);
+  }
+
+.btn:hover {
+    transform: scale(1.1);
+  }
+.btn-design
+{
+    margin-top: 10%;
+    margin-right:3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.footer-icon
+{
+    color: white;
+}
+.footer-icon:hover{
+    color: grey;
+          
+}
+footer
+{
+    background-color: black;
+    color: white;
+}
+@media (max-width: 800px) {
+    .img 
+    {
+      width: 300px;
+      height: 220px;
+    }  
+    h2,p{
+        font-size: 5px;
+        padding-left: -250px;
+        margin-left: -100px;
+    }
+    }
